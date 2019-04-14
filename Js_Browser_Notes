@@ -1,0 +1,65 @@
+:: JavaScript::
+
+Document Object Model::
+
+document, attribute, element, text
+
+item = document.getElementById("");
+list = document.getElementByClassName("");
+item = document.getElementByTagName("")[]; -- Should specify the array 
+
+item = document.querySelector('. # '); -- Instead of using getElement
+item = document.querySelectorAll("");
+
+Printing in the DOM from Script:
+
+	item.innerText =""; -- pays attention to the style
+	item.textContent ="";
+	item.innerHtml = "";
+
+item.style.color =""; -- changing the styles
+	.style.borderBottom ="solid 10px blue"
+
+list[1].style.display = none; -- Doesnt show the elements in the DOM.
+
+Structural access::
+
+item.parentNode, parentElement, childNodes, children, lastChild, lastElementChild, nextSibling, nextElementSibling, previousSibling, previousElementSibling, removeChild 
+
+Creating Element::
+
+var tag =  document.createElement('div');
+div.className = "helo";
+div.setAtt('title', 'Hello Div');
+var txt = doc.createTextNode('Hello World');
+div.appendChild(txt);
+var container = doc.querySelector('header');
+var h1 = doc.querySelector('h1');
+container.insertBefore(div, h1);
+
+Above Creates -- <div class="helo" title="Hello Div">Hello World</div>
+
+Events::
+
+	var btn = document.getElementById();
+		
+		btn.addEventListener("keydown,focus,blur,cut,click,mouseover,input,change,submit", function(event){
+			
+			console.log(event) -- To get to know the event details
+			event.keycode; -- Returns the key event codes
+			event.target.attributes; -- Gets the element clicked
+			event.target.value; -- to get a input value
+			event.ctrlKey;
+			event.offsetX, e.offsetY
+			removeEventListener("click", function()) -- removes the listener, using it here plays the event once.
+		});
+		
+	"event" has its own properties to be manupulated
+	
+	onclick();
+	mouseenter();
+	keyup();
+	
+	
+Refer to SS -- DOM1, DOM2
+	
