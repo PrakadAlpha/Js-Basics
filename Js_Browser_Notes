@@ -1,6 +1,28 @@
 :: JavaScript::
 
-Document Object Model::
+::::::::::::::::::::::::::::: Alerts :::::::::::::::::::::::::::::::::::
+
+alert('');
+prompt() - Input return
+confirm('') - return 'YES' or 'NO'
+
+:::::::::::::::::::::::::::: Window Object ::::::::::::::::::::::::::::::::::::::::
+
+window. outerHeight and innerHeight
+		outerWidth and innerWidth
+		
+		scrollX and scrollY - scroll bar points
+		
+		location - Details of the system using
+				 - href, reload, hostname, port	
+
+		history - Manipulate the history
+				- go(), length
+				
+		navigator - Manipulate the browser 
+				  - vendor, platform, appname, version, language
+					
+:::::::::::::::::::::::::::::::::::Document Object Model:::::::::::::::::::::::
 
 document, attribute, element, text
 
