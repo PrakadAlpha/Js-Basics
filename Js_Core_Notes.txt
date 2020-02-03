@@ -2,7 +2,13 @@
 
 Javascript is Case Sensitive
 		   is Dynamically Typed
-		   
+		   is Single Threaded
+		 
+		 Javascript Code 
+		 	|
+		 Javascript Engine (V8, SpiderMonkey) 
+		 	|
+	  	    On webpage (parse Code -> Compile to Machine Code -> Execute Machine Code)
 		   
 :::::::::::::::::::Datatypes::::::::::::::::::: 
 
