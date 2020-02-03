@@ -1,5 +1,8 @@
 :: JavaScript::
 
+defer - used to wait for the html body to finish load (DOMcontentLoaded event)
+async - same but no specific order loads asynchronously
+
 ::::::::::::::::::::::::::::: Alerts :::::::::::::::::::::::::::::::::::
 
 alert('');
