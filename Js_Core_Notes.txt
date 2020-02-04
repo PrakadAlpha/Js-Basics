@@ -21,7 +21,7 @@ Javascript is Case Sensitive
 	logical OR (||) => Can be used to set default values  (truthy or falsy || default value)
 	logical AND (&&) => Can be used as conditional checker (check && statement)
 		   
-:::::::::::::::::::Datatypes::::::::::::::::::: 
+:::::::::::::::::::::::::::::::::::::: Datatypes ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 Primitive(stack):-
 
@@ -43,9 +43,9 @@ Reference types(heap):-
 	
 Type coersion happens when two different datatypes are manipulated together
 
-:::::::::::::::::::Console Tricks:::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::: Console Tricks :::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-console.dir(document);
+conso000000le.dir(document);
 console.table
 console.error
 console.warn
@@ -216,11 +216,12 @@ Methods:-
 
 ::::::::::::::::::::::::: Functions :::::::::::::::::::::::
 
-Decalaration :-
+Decalaration :- (Hoisted)
 	
-	function(){return x}
+	- function(){return x}
+	- arguments => keyword can be used 
 	
-Expression:-
+Expression:- (Hoisted but not declared)
 
 	const name = function optional() {return x};
 
@@ -229,9 +230,7 @@ Immidiatley Invokable Function Expression (IIFE):-
 	- Decalared and ran at the same time
 
 	(function(){
-		
-		log(x);
-		
+	   log(x);
 	})(x);
 
 Methods:- 
@@ -241,9 +240,23 @@ Methods:-
 	const todo = {
 		add: function(){x};	
 	}
-	
 	todo.add();
 	
+	
+Arrow function:- 
+
+	const arrow = () => {};
+
+Rest Operator:-
+
+	- Used in parameters of functions 
+	- (...rest) creates array of params
+	- Should be the last parameter
+	
+Callback functions:- 
+
+	
+
 ::::::::::::::::::::::: Loops :::::::::::::::::::::::
 
 	for(x of array) - Used for Arrays
