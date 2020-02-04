@@ -52,7 +52,7 @@ Type coersion happens when two different datatypes are manipulated together
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::: Console Tricks :::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-conso000000le.dir(document);
+console.dir(document);
 console.table
 console.error
 console.warn
@@ -309,6 +309,9 @@ Callback functions:-
 	const [variable] = arr;
 	const [var1, ...varArr] = arr;
 	
+	const {keyName : optionalName} = obj;
+	const {keyName, ...otherProps} = obj;
+	
 
 ::::::::::::::::::::::: Loops :::::::::::::::::::::::
 
@@ -331,7 +334,15 @@ Callback functions:-
 	obj.new = add;     - adds new if not in obj
 	obj.old = replace; - replaces obj props 
 	delete obj.old;    - delete the props
+
+	Access dynamic props  - [key]: 'normal'
 	
+	'in' => (var in obj) -- true or false
+	
+	this => refers to the calling object scope(which invokes) ==> Use bind(objRef) to sovle the problem
+	
+	get fun(){return value} and 
+	set func(val) {this.val = val return;} => can use this in the methods of the objects
 
 	Methods:-
 
@@ -344,7 +355,7 @@ Callback functions:-
 
 		Object.values() - returns values also works with array
 
-		Object.entries() - returns with the key value also works with array
+		Object.entries() - returns with the [key,value] also works with array
 
 		Object.getOwnPropertyDescriptors(obj) - accepts an object and returns an object with the set of descriptors
 
@@ -353,5 +364,16 @@ Callback functions:-
 		Object.getPrototypeOf(new Object() -- To get the prototype of the object
 
 		isPrototypeOf() -- You can check the prototype of an object using this method
+		
+::::::::::::::::::::::::: this :::::::::::::::::::::::::
 
+Assigning the 'this':-
 
+	bind(obj, ...varArgs) -> future execution to to assign to a variable
+	call(obj, ...varArgs) -> Same as bind() but executes rightaway without new assignment
+	apply(obj, [varArgs]) -> Same as call but with only one extra array as argument
+	
+	Functions for event have 'this' as -> Event
+	
+	Arrow functions binds the 'this' to the outside context
+	Declared Functions binds the 'this' to the calling obj or to the window
