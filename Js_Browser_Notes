@@ -25,12 +25,12 @@ window. outerHeight and innerHeight
 		navigator - Manipulate the browser 
 				  - vendor, platform, appname, version, language
 					
-:::::::::::::::::::::::::::::::::::Document Object Model:::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::: Document Object Model :::::::::::::::::::::::::::::::::::::::::
 
 document, attribute, element, text
 
-item = document.getElementById("");
-list = document.getElementByClassName("");
+item = document.getElementById("#");
+list = document.getElementByClassName(".");
 item = document.getElementByTagName("")[]; -- Should specify the array 
 
 item = document.querySelector('. # '); -- Instead of using getElement
@@ -43,15 +43,38 @@ Printing in the DOM from Script:
 	item.innerHtml = "";
 
 item.style.color =""; -- changing the styles
-	.style.borderBottom ="solid 10px blue"
+    .style.borderBottom ="solid 10px blue"
 
 list[1].style.display = none; -- Doesnt show the elements in the DOM.
 
-Structural access::
+::::::::::::::::::::::::::::::::::::::: Structural access :::::::::::::::::::::::::::::::::::::::::
 
-item.parentNode, parentElement, childNodes, children, lastChild, lastElementChild, nextSibling, nextElementSibling, previousSibling, previousElementSibling, removeChild 
+document.querySelector(ul li:lastChild).style.color = 'red';
+document.querySelector(ul li:nth-child(2)).style.color = 'blue';
 
-Creating Element::
+
+item.parentNode, 
+parentElement, 
+childNodes, 
+children, 
+lastChild, 
+lastElementChild, 
+nextSibling, 
+nextElementSibling, 
+previousSibling, 
+previousElementSibling, 
+
+appendChild
+removeChild 
+replaceChild
+createTextNode
+
+getAttribute();
+setAttribute('','');
+hasAttribute();
+removeAttribute();
+
+::::::::::::::::::::::::::::::::::::::: Creating Element :::::::::::::::::::::::::::::::::::::::
 
 var tag =  document.createElement('div');
 div.className = "helo";
@@ -80,11 +103,36 @@ Events::
 		});
 		
 	"event" has its own properties to be manupulated
+	event.preventDefault() - Stops its default behaviour(logs or executes the callback rather than redirecting when clicked)
 	
-	onclick();
-	mouseenter();
-	keyup();
+	href='#' or e.preventDefault to stop redirecting.
 	
+		
+	e.clientX or clientY - Coords relative to the window
+	e.offsetX or offsetY - Coords relative to the element
+	e.timeStamp
+	
+	
+::::::::::::::::::::::: Events list :::::::::::::::::::::::::
+	
+	click
+	dblclick
+	mousedown
+	mouseup
+	mouseenter, mouseleave - both work on only main element
+	mouseover
+	mouseout, mousemove - All inner element
+	keyup, keydown
+	keypress
+	focus, blur
+	cut, paste, copy, undo
+	input(common for above 4)
+	change
+
+
+EventBubbling - All events default bubbles up till the parent elements
+EventDelegation - Specify the parent to work
+
 	
 Refer to SS -- DOM1, DOM2
 	
