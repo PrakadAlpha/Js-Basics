@@ -133,6 +133,17 @@ Events::
 EventBubbling - All events default bubbles up till the parent elements
 EventDelegation - Specify the parent to work
 
+::::::::::::::::::::::: Local and Sessions Storage :::::::::::::::::::::::::
+
+localStorage - stays
+sessionStorage - clears when browser closed
+	.getItem('',''), setItem('',''), clear()
+
+JSON.parse(localStorage.getItem('')) - to get
+JSON.stringify(localStorage.setItem('')) - to set 
+
+
+
 	
 Refer to SS -- DOM1, DOM2
 	
