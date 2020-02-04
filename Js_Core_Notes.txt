@@ -1,3 +1,10 @@
+pending::
+
+callback()
+bind(), call(), apply()
+
+
+
 ::::::::::::::::::::: Basics :::::::::::::::::::::
 
 Javascript is Case Sensitive
@@ -194,7 +201,7 @@ Methods:-
 	a.find(x => x.id === my_id) -- Will return the first element in the array that has id === my_id (Like lamba expressions returns based on condition in function)
 	a.findIndex()				-- Returns the index of the first item that returns true, and if not found, it returns undefined
 	a.includes(value, i) 		-- Returns true if the array contains the value after the index
-	a.slice() 					-- Getting a portion of array
+	a.slice() 					-- Getting a portion of array as a new copy+-0
 	a.sort() 					-- ASCII(0-9A-Za-z) (sorts onyl the first number based so need to use a comparator)
 	a.reverse()
 	a.toString 					-- Returns string expression of the array
@@ -213,7 +220,43 @@ Methods:-
 	const c = [1, 2, 3, 4, 5]
 	c.copyWithin(0, 2, 4) // [3, 4, 3, 4, 5]
 	//4  is an end index
+	
+	Spread => [...arr] - creates a new array same as arr
+	
+::::::::::::::::::::::: Maps & Sets :::::::::::::::::::::::
 
+Sets:- (No dups, Not ordered)
+
+   const ids = new Set(1,2,2);
+	
+    Methods:-
+    	
+	.has(v)    - check if it has it 
+	.add(v)    - adds
+	.entries() - get a set of values
+	.values()
+	.delete(v) - deletes
+ 
+WeakSet:- (Allows garbage collection)
+
+	- Only objects or arrays
+ 
+    
+Maps:- (No dup key, any types, Order guaranteed)
+	
+   const data = new Map([k, v]);
+   
+   Methods:-
+   	
+	.get(v)    - get the values
+	.set(k, v)
+	.entries() - set of keys and values
+	.values()  - returns all values
+	.keys()    - returns all keys
+	.clear(), .delete(), .size	
+
+WeakMap:- (Allows garbage collection)
+	
 ::::::::::::::::::::::::: Functions :::::::::::::::::::::::
 
 Decalaration :- (Hoisted)
@@ -254,7 +297,17 @@ Rest Operator:-
 	- Should be the last parameter
 	
 Callback functions:- 
+	
+	- 
+	
+::::::::::::::::::::::: Destructuring :::::::::::::::::::::::
 
+	array to variables
+	
+	arr = ['wewe','ewqew',12,true];
+	
+	const [variable] = arr;
+	const [var1, ...varArr] = arr;
 	
 
 ::::::::::::::::::::::: Loops :::::::::::::::::::::::
