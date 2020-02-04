@@ -10,6 +10,11 @@ Javascript is Case Sensitive
 		 	|
 	  	    On webpage (parse Code -> Compile to Machine Code -> Execute Machine Code)
 		   
+:::::::::::::::::::::::::::::::::::::: Tips & Tricks ::::::::::::::::::::::::::::::::::::::
+
+	logical OR (||) => Can be used to set default values  (truthy or falsy || default value)
+	logical AND (&&) => Can be used as conditional checker (check && statement)
+		   
 :::::::::::::::::::Datatypes::::::::::::::::::: 
 
 Primitive(stack):-
@@ -235,7 +240,8 @@ Methods:-
 	
 ::::::::::::::::::::::: Loops :::::::::::::::::::::::
 
-	for(x in map) - Used for map
+	for(x of array) - Used for Arrays
+	for(x in map) - Used for Objects
 	a.forEach(f(current, index, array)) 	 -- Iterates f on a without a way to stop		
 	a.map(fun())   	 -- builds a new array according to the request
 	a.filter(fun())	 -- builds a new array with according to changes with the filter function
