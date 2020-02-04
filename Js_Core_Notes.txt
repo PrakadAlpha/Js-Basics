@@ -7,8 +7,14 @@ Javascript is Case Sensitive
 		 Javascript Code 
 		 	|
 		 Javascript Engine (V8, SpiderMonkey) 
-		 	|
+		 	|		    [Interpret and compile(JIT)]
 	  	    On webpage (parse Code -> Compile to Machine Code -> Execute Machine Code)
+		    
+:::::::::::::::::::::::::::::::::::::: Memory management ::::::::::::::::::::::::::::::::::::::
+
+	Heap  => Stores the functions and reference values and addresses
+	Stack => Stores the primitive values
+
 		   
 :::::::::::::::::::::::::::::::::::::: Tips & Tricks ::::::::::::::::::::::::::::::::::::::
 
