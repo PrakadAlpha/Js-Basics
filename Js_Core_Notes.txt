@@ -327,26 +327,31 @@ Callback functions:-
 		o = {};
 		
 	Accessed using Dot(.) Operator -- a.prop
-
-::::::::::::::::::::::: Methods :::::::::::::::::::::::
-
-Array.prototype.includes()
-
-padStart() and padEnd()
-
-	padStart(targetLength [, padString])
-	padEnd(targetLength [, padString])
 	
-Object.values() - returns values also works with array
+	obj.new = add;     - adds new if not in obj
+	obj.old = replace; - replaces obj props 
+	delete obj.old;    - delete the props
+	
 
-Object.entries() - returns with the key value also works with array
+	Methods:-
 
-Object.getOwnPropertyDescriptors(obj) - accepts an object and returns an object with the set of descriptors
+		Array.prototype.includes()
 
-Object.assign() -- combine the objects together to return a single object
+		padStart() and padEnd()
 
-Object.getPrototypeOf(new Object() -- To get the prototype of the object
+			padStart(targetLength [, padString])
+			padEnd(targetLength [, padString])
 
-isPrototypeOf() -- You can check the prototype of an object using this method
+		Object.values() - returns values also works with array
+
+		Object.entries() - returns with the key value also works with array
+
+		Object.getOwnPropertyDescriptors(obj) - accepts an object and returns an object with the set of descriptors
+
+		Object.assign() -- combine the objects together to return a single object
+
+		Object.getPrototypeOf(new Object() -- To get the prototype of the object
+
+		isPrototypeOf() -- You can check the prototype of an object using this method
 
 
