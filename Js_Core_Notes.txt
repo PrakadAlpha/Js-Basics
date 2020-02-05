@@ -377,3 +377,8 @@ Assigning the 'this':-
 	
 	Arrow functions binds the 'this' to the outside context
 	Declared Functions binds the 'this' to the calling obj or to the window
+	
+	
+:::::::::::::::::::::::::::::::::::::::::::::::::: OOPS ::::::::::::::::::::::::::::::::::::::::::::::::::
+
+ 
