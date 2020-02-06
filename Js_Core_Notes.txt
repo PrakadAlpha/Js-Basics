@@ -401,4 +401,20 @@ Assigning the 'this':-
 	
 :::::::::::::::::::::::::::::::::::::::::::::::::: OOPS ::::::::::::::::::::::::::::::::::::::::::::::::::
 
- 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::: Prototype ::::::::::::::::::::::::::::::::::::::::::::::::::
+
+	- Every object has the Object as a prototype as base (Object.prototype)
+	- __proto__  => used in all the objects no matter what and chains till the parent base class.
+	- prototype => used in constructor function to refer to the __proto__ for the objects created using the constructor
+	- All methods are created in the prototype of the object
+	
+	Object.getPrototypeOf(obj) same for __proto__
+	
+	Object.setPrototypeOf(obj, {props}); => 2nd parameter as new prototype 
+	
+	Object.create({props}); - create an object with the mentioned props as a prototype
+	
+	Object.defineProperty(obj, {decriptor})
+ 	
+	
