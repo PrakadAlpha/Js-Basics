@@ -40,7 +40,7 @@ Printing in the DOM from Script:
 
 	item.innerText =""; -- pays attention to the style
 	item.textContent ="";
-	item.innerHtml = "";
+	item.innerHtml = ""; -- create elements
 
 item.style.color =""; -- changing the styles
     .style.borderBottom ="solid 10px blue"
@@ -49,9 +49,10 @@ list[1].style.display = none; -- Doesnt show the elements in the DOM.
 
 ::::::::::::::::::::::::::::::::::::::: Structural access :::::::::::::::::::::::::::::::::::::::::
 
+Nodes and Elements are different were nodes include the whitespaces
+
 document.querySelector(ul li:lastChild).style.color = 'red';
 document.querySelector(ul li:nth-child(2)).style.color = 'blue';
-
 
 item.parentNode, 
 parentElement, 
@@ -59,12 +60,15 @@ childNodes,
 children, 
 lastChild, 
 lastElementChild, 
+
 nextSibling, 
 nextElementSibling, 
 previousSibling, 
 previousElementSibling, 
 
-appendChild
+appendChild(only access child), 
+append(can add a string and use as text node)
+prepend()
 removeChild 
 replaceChild
 createTextNode
@@ -86,6 +90,9 @@ var h1 = doc.querySelector('h1');
 container.insertBefore(div, h1);
 
 Above Creates -- <div class="helo" title="Hello Div">Hello World</div>
+
+insertAdjacentElement('beforebegin', 'afterbegin', beforeend, afterend) 
+cloneNode(true or false(deep or not`)) - clones the element
 
 Events::
 
