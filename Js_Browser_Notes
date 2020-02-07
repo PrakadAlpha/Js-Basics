@@ -60,6 +60,7 @@ childNodes,
 children, 
 lastChild, 
 lastElementChild, 
+closest('tag')
 
 nextSibling, 
 nextElementSibling, 
