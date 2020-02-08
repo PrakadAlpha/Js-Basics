@@ -1,0 +1,36 @@
+Modules::
+
+  - Use type ="module" attribute in the head script tag
+  - Use export and import {ClassName} from 'relativepath'
+  - globalThis alternate for this or window obj
+  - import Name{Names} from 'relativePath' -> for default export's
+  
+ESlint::
+  
+  - Install using npm as devDependencies
+  - Configure using ctrl + shift + p and select the configure file
+  - Change the settings using json file
+  
+Webpack::
+  
+  - Used for bundling all files
+  
+Browser Storage::
+  
+  - localStorage(stored until cleared)
+  - sessionStorage(stored until page closes) => key and value pairs, only js can use   
+      
+      localStorage.getItem('key') -> JSON.parse if object retireval
+      localStorage.setItem('key','value') -> JSON.stringify if object storing
+      Same for sessions.
+  
+  - cookies => same as local but difference is they are sent to server all the time
+    
+     document.cookie - Get all cookie values or not
+     doucment.cookie = `key=${value}`;
+     doucment.cookie = `key=${value}; max-age=2` => expires after 2 secs
+      Can split the string with ; and use as array, also split with '=' to get the key and values
+     Can be set to expire
+        
+  - IndexedDB => a normal database can have complex data 
+      
