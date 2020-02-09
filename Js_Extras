@@ -34,3 +34,18 @@ Browser Storage::
         
   - IndexedDB => a normal database can have complex data 
       
+Browser Support::
+  
+  - core-js => bunch of polyfills that can be used
+  
+  - nomodule script tag for fallback 
+  
+  - <noscript>javascript not enabled</noscript>
+  
+  Polyfill
+   
+    - Build the updated stuffs using old workaround (promises can be done using callback)(fetch can be done using XHR)
+    
+  Transpiling(babel)
+  
+   - New code to old code
