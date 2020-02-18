@@ -139,7 +139,7 @@ Events::
 
 
 EventBubbling - All events default bubbles up till the parent elements
-EventDelegation - Specify the parent to work
+EventDelegation - Specify in the parent and target the child tags to work for the event
 
 ::::::::::::::::::::::: Local and Sessions Storage :::::::::::::::::::::::::
 
