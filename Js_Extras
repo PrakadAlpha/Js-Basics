@@ -130,3 +130,17 @@ Browser Support::
    - /s(?=y)/ => s followed by y
    - /s(?!y)/ => s not followed by y
    
+ ::::::::::::::::::::::::::::::::::: Design Patterns :::::::::::::::::::::::::::::::::::
+ 
+    - Structured and Standard way of writing code specific to language specification
+    - List:: 
+      
+      - Module
+      - Revealing Module Pattern => Using IIFE function and returning objects to make it private and public
+      - Singleton => Same IIFE but create a func to create instance and check for valid instance else create only once
+      - Factory => Create seperate constructors and a common subclass to create object props
+      - Observer =>   
+      - Mediator
+      - State
+      
+    - 
