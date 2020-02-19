@@ -1,4 +1,4 @@
-Modules::
+::::::::::::::::::::::::::::::::::::::::::::::::: Modules :::::::::::::::::::::::::::::::::::::::::::::::::::
 
   - Use type ="module" attribute in the head script tag
   - Use export and import {ClassName} from 'relativepath'
@@ -11,11 +11,11 @@ ESlint::
   - Configure using ctrl + shift + p and select the configure file
   - Change the settings using json file
   
-Webpack::
+::::::::::::::::::::::::::::::::::::::::::::::::: Webpack :::::::::::::::::::::::::::::::::::::::::::::::::::
   
   - Used for bundling all files
   
-Browser Storage::
+::::::::::::::::::::::::::::::::::::::::::::::::: Browser Storage :::::::::::::::::::::::::::::::::::::::::::::::::::
   
   - localStorage(stored until cleared)
   - sessionStorage(stored until page closes) => key and value pairs, only js can use   
@@ -50,8 +50,9 @@ Browser Support::
   
    - New code to old code
    
-AJAX::(FetchApi, Axios, JQuery, NodeHttp)
+::::::::::::::::::::::::::::::::::::::::::: AJAX :::::::::::::::::::::::::::::::::::::::::::::::::::
 
+  - (FetchApi, Axios, JQuery, NodeHttp)
   - Asynchronous Javascript And XML
   - Asynchronous data transfer between req and res
   - Updates without reploading the page
@@ -69,9 +70,63 @@ AJAX::(FetchApi, Axios, JQuery, NodeHttp)
       - 4 : request finished and response ready (onload)
       - onerror
       
-API:: Application Programming Interface
+::::::::::::::::::::::::::::::::::::::::::::::::: API :::::::::::::::::::::::::::::::::::::::::::::::::::
 
+  - Application Programming Interface 
   - Structured req and res
   
-    
+::::::::::::::::::::::::::::::::::::::::::::::::: Regex :::::::::::::::::::::::::::::::::::::::::::::::::
+
+  - new RegExp();
+  - starts and ends with '/'
+    let ex = /hello/
   
+  Flags::
+  
+  - /hello/i => makes it case insensitive
+    /hello/g => makes it global matching
+    
+  Methods::
+  
+  - ex.exec('hellowolrd') - Returns the index in array or null
+  - ex.test('phrase') - tests and returns true or false
+  - phrase.match(ex) - same like exec but opp
+  - phrase.search(ex) - returns the index of the match else -1
+  - phrase.replace(ex, 'newPhrase') - returns string with replaced value
+  
+  Symbols::
+  
+   - ^ => anything that starts with => /^h/
+   - $ => anything that ends with => /world$/
+   - both in exp => /^hello$/ must start with hello and end with hello
+   - . => matches any one char
+   - * => matches any 0 or more times
+   - ? => optional char => /gre?a?y/ =>  e or a or none
+   - + => one or more
+  
+  Brackets::
+  
+   - [] used for char set => /gr[ea]y/ => must be a or e
+   - [^] used for exception => /[^gf]ray/ => must not be g or f
+   - [s-e] used for range => /[A-Z]ray/ => anything in that range
+   
+   - {m} used to count the number of ele => /re{2}g/ => 2 e are allowed
+                                         => /re{2,4}g/ => 2 to 4 e are allowed 
+                                         => /re{2,}g/ => atleast 2 times
+   - () used for grouping.
+   
+  Shorthand::
+  
+   - \w => word char or _
+   - \W => non-word char
+   - \d => any digit
+   - \D => any non-digit
+   - \s => any space
+   - \S => any non space
+   - /hell\b/ => word boundary(onyl that word) hello wont pass
+   
+  Assertions::
+  
+   - /s(?=y)/ => s followed by y
+   - /s(?!y)/ => s not followed by y
+   
