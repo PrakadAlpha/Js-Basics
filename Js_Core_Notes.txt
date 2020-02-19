@@ -417,4 +417,5 @@ Assigning the 'this':-
 	
 	Object.defineProperty(obj, {decriptor})
  	
+:::::::::::::::::::::::::::::::::::::::::::::: Iterators and Generators :::::::::::::::::::::::::::::::::::::::::::::::::: 	
 	
