@@ -139,8 +139,6 @@ Browser Support::
       - Revealing Module Pattern => Using IIFE function and returning objects to make it private and public
       - Singleton => Same IIFE but create a func to create instance and check for valid instance else create only once
       - Factory => Create seperate constructors and a common subclass to create object props
-      - Observer =>   
-      - Mediator
-      - State
-      
-    - 
+      - Observer => subsribe to do something and unsibscribe when not needed  
+      - Mediator => Common class to communicate like a chat room
+      - State => Like navbar between different states
