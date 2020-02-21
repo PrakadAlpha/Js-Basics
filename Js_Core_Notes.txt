@@ -419,4 +419,35 @@ Assigning the 'this':-
 	Object.defineProperty(obj, {decriptor})
  	
 :::::::::::::::::::::::::::::::::::::::::::::: Iterators and Generators :::::::::::::::::::::::::::::::::::::::::::::::::: 	
+	- Iterators are used to loop through thhe object using next() methods
+	- It turns a nomral object to an iterable object
+	- It returns object with two props {value: this.obj[index], done: false}  with inc index++ and the condition for 	   false {value: this.obj, done: true}
+	- It is called using Obj.next() and so on, should be used a while loop until done is true
+	- const employee = {
+			  curWork: 0,
+			  workers: [1,2,3,4,5],
+			  next(){
+			    if(this.curWork >= this.workers.length){
+			      return {value: this.curWork, done: true};
+			    }
+			    const value = {value: this.workers[this.curWork], done: false};
+			    this.curWork++;
+			    return value;
+			  }}
+		console.log(employee.next());
 	
+	- Generators build iterators with yield values and used as same with next(), that pauses the execution
+	- Yield saves the state of execution and next() to continue
+	- Using it with [Symbol.Iterator] as a key makes it iterbale and use in for..of loop
+	- const employee = {
+			  workers: [1,2,3,4,5],
+			  [Symbol.iterator] : function* empGen() {
+			    let curWork = 0;
+			    while(curWork < this.workers.length){
+			      yield this.workers[curWork];
+			      curWork++;
+			  }}}
+		for(let val of employee){
+		  console.log(val);
+		}
+			
