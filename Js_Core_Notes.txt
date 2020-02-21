@@ -1,7 +1,5 @@
 pending::
 
-callback()
-bind(), call(), apply()
 
 
 
@@ -28,6 +26,9 @@ Javascript is Case Sensitive
 	logical OR (||) => Can be used to set default values  (truthy or falsy || default value)
 	logical AND (&&) => Can be used as conditional checker (check && statement)
 		   
+	string to integer => use parseInt or parseFloat 
+			  => can use +'1.1' unary plus to change to int
+
 :::::::::::::::::::::::::::::::::::::: Datatypes ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 Primitive(stack):-
@@ -50,7 +51,7 @@ Reference types(heap):-
 	
 Type coersion happens when two different datatypes are manipulated together
 
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::: Console Tricks :::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::: Console Tricks ::::::::::::::::::::::::::::::::::::::::::::::::
 
 console.dir(document);
 console.table
@@ -310,15 +311,14 @@ Factory Functions::
 
 Closures::
 
-  Every function in a javascript is a Closure
+  - Every function in a javascript is a Closure
+  - Function inside a function is called closure
+  - Even after the return statement of the above function we are able to access the outer functions variable because of the 	scope chain
+  - The outer function is removed from the call stack though the reference are tied up in lexical scope chain
 
   Javascript every number is a floating point with 64bit precision
 
   Max number = 2**53 - 1
-
-Regex::
-
-  \\ or new Regex('')
 	
 ::::::::::::::::::::::: Destructuring :::::::::::::::::::::::
 
@@ -389,10 +389,11 @@ Regex::
 
 Assigning the 'this':-
 
-	bind(obj, ...varArgs) -> future execution to to assign to a variable
-	call(obj, ...varArgs) -> Same as bind() but executes rightaway without new assignment
-	apply(obj, [varArgs]) -> Same as call but with only one extra array as argument
 	
+	let any = bind(this or anyObj,likeDefaultArg) - Same but returns a function so we can bind or preset the arguments
+	obj.call(this or anyObj, ...args) - Here all the this in obj are replaced with the 1st arg object   
+	obj.apply(this or anyObj, [argss]) - Here all the this in obj are replaced with the 1st arg object
+ 
 	Functions for event have 'this' as -> Event
 	
 	Arrow functions binds the 'this' to the outside context
