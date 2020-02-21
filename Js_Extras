@@ -1,3 +1,26 @@
+
+::::::::::::::::::::::::::::::::::::::::::::::::: MISC :::::::::::::::::::::::::::::::::::::::::::::::::
+
+Reflect API is the updated Object methods in ES5.
+
+Proxy Api is wrapped around an object that executes every time invoking obj props and that can changed as 
+required using proxy object and special props
+
+Cross-Site-Scripting:: 
+  
+    - Using innerHTML tags
+    - Using <img src="" onerror="script">
+    - Use sanitizeHTml to protect
+
+Cross-Site-Request-Frogery::
+    
+    - Using a cloned site and access cookies, requests sent to original server and manipulate the backend.
+
+Cross-Origin-Resource-Sharing::
+
+    - Need to protect in server side using Allow-Cross-Access-Origin headers
+    
+  
 ::::::::::::::::::::::::::::::::::::::::::::::::: Modules :::::::::::::::::::::::::::::::::::::::::::::::::::
 
   - Use type ="module" attribute in the head script tag
@@ -142,3 +165,5 @@ Browser Support::
       - Observer => subsribe to do something and unsibscribe when not needed  
       - Mediator => Common class to communicate like a chat room
       - State => Like navbar between different states
+      
+    
