@@ -84,6 +84,7 @@ Browser Support::
   - const xhr = new XmlHttpRequest();
     xhr.open('GET', "data.txt" or url, true);
     xhr.onload = () => {if(xhr.status == 200) log(xhr.responseText)}
+    xhr.setRequestHeader('Content-Type', 'x-www-form-urlencoded') => To set the headers
     xhr.send();
   - readyState code::
       - 0 : request not intialized
